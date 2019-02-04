@@ -32,36 +32,6 @@ ll gcd (ll a, ll b) {return ( a ? gcd(b%a, a) : b );}
 ll power(ll a, ll n) {ll p = 1;while (n > 0) {if(n%2) {p = p * a;} n >>= 1; a *= a;} return p;}
 ll power(ll a, ll n, ll mod) {ll p = 1;while (n > 0) {if(n%2) {p = p * a; p %= mod;} n >>= 1; a *= a; a %= mod;} return p % mod;}
 
-// void binary_search(ll a, ll b, ll flag) {
-//     ll la, lb, ha, hb, ma, mb;
-//     if(flag) {
-//         cout<<"R";
-//         la = 1; lb = 1;
-//         ha = 1; hb = 0;
-//     }
-//     else {
-//         cout<<"L";
-//         la = 0; lb = 1;
-//         ha = 1; hb = 1;
-//     }
-//     while(la*hb < lb*ha) {
-//         ma = (la+ha);
-//         mb = (lb+hb);
-//         // cout<<" "<<la<<" "<<lb<<" "<<ma<<" "<<mb<<" "<<ha<<" "<<hb<<"\n";
-//         if(a*mb == b*ma) break;
-//         if(a*mb < b*ma) {
-//             cout<<"L";
-//             ha = ma;
-//             hb = mb;
-//         }
-//         else {
-//             cout<<"R";
-//             la = ma;
-//             lb = mb;
-//         }
-//     }
-// }
-
 int arr[1005][1005];
 int visited[1005][1005];
 int n, m, z, maxc=-1, mins=MOD, coun;
